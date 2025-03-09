@@ -5,6 +5,13 @@ export default function BookmarkForm({ onAdd }) {
     const [url, setUrl] = useState("");
     const [category, setCategory] = useState("");
 
+    const handleSubmit = () => {
+        if (!title || !url) return;
+        onAdd({ title, url, category });
+        setTitle("");
+        setUrl("");
+        setCategory("");
+    };
 
     return (
         <div className="mb-4">
