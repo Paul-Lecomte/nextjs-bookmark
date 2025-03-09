@@ -1,6 +1,11 @@
 import { useState } from "react";
 
 export default function BookmarkForm({ onAdd }) {
+    const [title, setTitle] = useState("");
+    const [url, setUrl] = useState("");
+    const [category, setCategory] = useState("");
+
+
     return (
         <div className="mb-4">
             <input type="text" placeholder="Title" className="border p-2 mr-2 rounded" />
