@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { useState } from "react";
 
 export default function BookmarkForm({ onAdd }) {
@@ -15,11 +16,36 @@ export default function BookmarkForm({ onAdd }) {
     };
 
     return (
-        <div className="mb-4">
-            <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} className="border p-2 mr-2 rounded"/>
-            <input type="url" placeholder="URL" value={url} onChange={(e) => setUrl(e.target.value)} className="border p-2 mr-2 rounded"/>
-            <input type="text" placeholder="Category" value={category} onChange={(e) => setCategory(e.target.value)} className="border p-2 mr-2 rounded"/>
-            <button onClick={handleSubmit} className="bg-blue-500 text-white p-2 rounded">Add</button>
+        <div className="mb-6 p-4 bg-gray-800 rounded-lg shadow-md">
+            <div className="flex flex-col gap-3">
+                <input
+                    type="text"
+                    placeholder="Bookmark Title"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    className="border p-2 rounded-md bg-gray-900 text-white focus:ring-2 focus:ring-blue-400"
+                />
+                <input
+                    type="url"
+                    placeholder="Bookmark URL"
+                    value={url}
+                    onChange={(e) => setUrl(e.target.value)}
+                    className="border p-2 rounded-md bg-gray-900 text-white focus:ring-2 focus:ring-blue-400"
+                />
+                <input
+                    type="text"
+                    placeholder="Category (Optional)"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                    className="border p-2 rounded-md bg-gray-900 text-white focus:ring-2 focus:ring-blue-400"
+                />
+                <button
+                    onClick={handleSubmit}
+                    className="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition"
+                >
+                    ➕ Add Bookmark
+                </button>
+            </div>
         </div>
     );
 }
