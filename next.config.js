@@ -4,4 +4,4 @@ const nextConfig = {
     trailingSlash: true, // Ensure trailing slash for Chrome extensions
 };
 
-export default nextConfig;
+module.exports = nextConfig;
