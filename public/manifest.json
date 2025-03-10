@@ -12,11 +12,5 @@
     "16": "icon.jpg",
     "48": "icon.jpg",
     "128": "icon.jpg"
-  },
-  "content_security_policy": {
-    "extension_pages": {
-      "script-src": "'self'",
-      "object-src": "'none'"
-    }
   }
 }
